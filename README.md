@@ -1,12 +1,17 @@
-# React + Vite
+Neste projeto foi utilizado as ferramentas React, Js, Css para estar rodando o Front-End do site da empresa Passo Livre. 
+Foi pensado em usar conceito de SPA para estruturação e navegação do site.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Versão do projeto atual: 1.0.0
 
-Currently, two official plugins are available:
+Relatorio de atividades 07-08-25
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*) Criado a estrutura base do site
+*) Refactoring para ajuste de layout 
+*) Trabalho das imagens de forma autoral, e composição de acordo com a missão da empressa
+*) Refactoring final de ajuste e organização das pastas
 
-## Expanding the ESLint configuration
+**Novas Features para implementação:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1) Scroll da SPA por Links
+2) Transição de Imgs com animation's
+3) IMPORTANTE! Melhor adaptabilidade e navegação em ambientes mobiles. 
