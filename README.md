@@ -1,4 +1,4 @@
-Neste projeto foi utilizado as ferramentas React, Js, Css para estar rodando o Front-End do site da empresa Passo Livre. 
+Neste projeto foi utilizado as ferramentas React, Js, Css para estar rodando o Front-End do site  para a empresa Passo Livre. 
 Foi pensado em usar conceito de SPA para estruturação e navegação do site.
 
 Versão do projeto atual: 1.0.0
