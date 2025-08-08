@@ -5,10 +5,11 @@ Versão do projeto atual: 1.0.0
 
 Relatorio de atividades 07-08-25
 
-*) Criado a estrutura base do site
-*) Refactoring para ajuste de layout 
-*) Trabalho das imagens de forma autoral, e composição de acordo com a missão da empressa
-*) Refactoring final de ajuste e organização das pastas
+* Criado a estrutura base do site
+* Refactoring para ajuste de layout
+* Trabalho das imagens de forma autoral, e composição de acordo com a missão da empressa
+* final de ajuste e organização das pastas
+* (versão:1.0.0)
 
 **Novas Features para implementação:**
 
