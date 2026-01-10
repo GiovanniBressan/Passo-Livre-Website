@@ -1,20 +1,16 @@
 .sectionBoxMain {
   display: flex;
   padding: 1rem;
-  height: 28rem;
+  height: auto;
 }
 
 .border {
   display: flex;
+  flex-direction: column;
   padding: 2rem;
-  height: 23rem;
-  border-top-width: 1;
-  border-style: solid;
-  border-bottom-width: 1;
-  border-left-width: 1;
-  border-right-width: 1px;
-  border-color: rgb(255, 255, 255);
-  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+  height: auto;
+  border: 1px solid white;
+  box-shadow: 10px 10px 10px 5px rgba(90, 90, 90, 0.3);
   border-radius: 20px;
 }
 
@@ -23,14 +19,12 @@
   padding: 1rem;
   align-items: center;
   border-top-width: 0;
-  border-style: solid;
-  border-bottom-width: 0;
+  border-bottom: 2px solid rgb(68, 99, 241);
   border-left-width: 0;
-  border-color: rgb(68, 99, 241);
 }
 
 .text {
-  font-size: larger;
+  font-size: 1.2rem;
   display: flex;
   padding: 1rem;
   align-items: center;
@@ -39,42 +33,44 @@
 .sectionBoxMainSec {
   display: flex;
   padding: 1rem;
-  height: 30rem;
+  height: auto;
 }
 
 .boxSect {
   display: flex;
-  height: 30rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
 
 .bercarioBox {
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   width: auto;
-  padding: 0rem;
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 1rem;
 }
 
 .titulo {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   color: rgb(68, 99, 241);
-  align-items: center;
-  padding: 0rem;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .bercarioText {
   display: flex;
-  padding: 2rem;
   align-items: center;
   height: auto;
-  width: 70%;
+  padding: 1rem;
+  width: 100%;
+  text-align: justify;
 }
 
 .itemMain {
   display: flex;
-  height: 22rem;
+  height: 29rem;
   padding-right: 5rem;
 }
 
@@ -82,17 +78,54 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: auto;
+  max-width: 100%;
   display: flex;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .sectionBoxMain,
   .sectionBoxMainSec {
     flex-direction: column;
-    height: auto;
+  }
+  .sectionBoxMain {
+    display: flex;
     padding: 1rem;
+    height: auto;
+  }
+
+  .border {
+    display: inline-grid;
+    height: auto;
+    padding: 2rem;
+    border-top-width: 1;
+    border-style: solid;
+    border-bottom-width: 1;
+    border-left-width: 1;
+    border-right-width: 1px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+
+  .quemSomos {
+    display: flex;
+    height: auto;
+    color: rgb(71, 103, 248);
+    align-items: center;
+    border-top-width: 0;
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-color: rgb(8, 27, 114);
+  }
+
+  .text {
+    padding: 1rem;
+    display: flex;
+    width: auto;
   }
 
   .boxSect {
@@ -103,26 +136,40 @@
   .bercarioImg {
     display: flex;
     height: auto;
-    width: 100%;
-    border-radius: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 100px;
   }
 
   .bercarioBox {
     width: 100%;
-    padding: 1rem;
+    text-align: start;
+    padding: 0rem;
   }
 
   .bercarioText {
     padding: 1rem;
-    width: 100%;
     height: auto;
+    width: auto;
+    text-align: start;
+    word-spacing: 1px;
+    font-size: 1rem;
   }
 
   .itemMain {
+    height: 21rem;
     padding: 1rem;
     justify-content: center;
+  }
+  .text {
+    font-size: medium;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+  }
+  .titulo {
+    font-size: 1.8rem;
+    text-align: center;
   }
 }

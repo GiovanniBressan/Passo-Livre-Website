@@ -5,58 +5,57 @@
   font-family: "Hind Siliguri", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    background: linear-gradient(180deg, #000e, transparent);
-  }
-}
-@media (max-width: 768px) {
-  .menu {
-    align-items: center;
-    padding: 1rem;
-  }
-  .logo-top {
-    height: 80px;
-  }
-  .lista-nav {
-    gap: 1rem;
-  }
-}
 .menu {
-  position: absolute;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  position: sticky;
   top: 0;
-  left: 0;
-  padding: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent);
+  width: 100%;
+  z-index: 10;
+  justify-content: center;
+  background: rgb(120, 145, 255);
 }
-
 .logo-top {
-  height: 120px;
   padding: 0.75rem;
 }
 .lista-nav {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 2rem;
   padding: 0;
   list-style: none;
   margin: 0;
-  padding: 0;
+  justify-content: center;
 }
 
 .listagem {
+  align-items: center;
   color: white;
   cursor: pointer;
   font-weight: 500;
   transition: color 0.3s ease;
   list-style-type: none;
   height: 30px;
-  padding: 0;
+  padding: 1rem;
 }
 
 .listagem:hover {
   color: #4596f1;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    height: auto;
+    padding: 0.5rem 1rem;
+    width: auto;
+    align-items: center;
+  }
+  .lista-nav {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .listagem {
+    display: flex;
+    padding: 0.5rem;
+  }
 }

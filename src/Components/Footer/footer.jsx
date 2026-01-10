@@ -1,18 +1,14 @@
 import Localização from "./googleMaps/googlemaps";
 import style from "./style.module.css";
+import { sections } from "../header/sections";
+import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id={sections.contatos}>
       <div className={style.footerBox}>
         <div className={style.footerItem}>
-          <h1
-            style={{
-              paddingLeft: "2.5rem",
-            }}
-          >
-            Contatos
-          </h1>
+          <h1>Contatos</h1>
           <ul className={style.listUl}>
             <li className={style}>
               R. Celestino Júnior, 288 - São Francisco, Curitiba - PR
@@ -22,15 +18,20 @@ export default function Footer() {
             <div className={style.socialMidia}>
               <a href="https://www.instagram.com/escolapassolivre/">
                 <img
-                  src="/public/Logo/instagram.svg"
+                  src={"/instagram.svg"}
                   alt="instagram"
+                  target="_blank"
                   className={style.socialMidia}
                 />
               </a>
-              <a href="https://www.facebook.com/passolivreescola/">
+              <a
+                href="https://www.facebook.com/passolivreescola/"
+                target="_blank"
+              >
                 <img
-                  src="/public/Logo/facebook.svg"
+                  src={"/facebook.svg"}
                   alt="Facebook"
+                  target="_blank"
                   className={style.socialMidia}
                 />
               </a>
@@ -38,43 +39,58 @@ export default function Footer() {
           </ul>
         </div>
         <div className={style.footerItem}>
-          <h1
-            style={{
-              paddingLeft: "2.5rem",
-            }}
-          >
-            Links
-          </h1>
-          <ul className={style.listUl}>
-            <div>
-              <a href="/">
-                <li className={style.listagemFooter}>Home</li>
-              </a>
+          <h1>Links</h1>
+
+          <nav className={style["listU2"]}>
+            <div className={style["listU2"]}>
+              <Link
+                to={sections.home}
+                smooth={true}
+                duration={500}
+                className={style.listagemFooter}
+              >
+                Home
+              </Link>
+              <Link
+                to={sections.quemSomos}
+                smooth={true}
+                duration={500}
+                className={style.listagemFooter}
+              >
+                Quem Somos
+              </Link>
+              <Link
+                to={sections.atividades}
+                smooth={true}
+                duration={500}
+                className={style.listagemFooter}
+              >
+                Atividades
+              </Link>
+              <Link
+                to={sections.contatos}
+                smooth={true}
+                duration={500}
+                className={style.listagemFooter}
+              >
+                Contatos
+              </Link>
             </div>
-            <li className={style.listagemFooter}>Quem Somos</li>
-            <li className={style.listagemFooter}>Atividades</li>
-            <li className={style.listagemFooter}>Contatos</li>
-          </ul>
+          </nav>
         </div>
         <div className={style.footerItem}>
-          <h1
-            style={{
-              paddingLeft: "1rem",
-              margin: 1,
-            }}
-          >
-            Localização
-          </h1>
+          <h1>Localização</h1>
           <Localização></Localização>
         </div>
       </div>
       <p
         style={{
-          backgroundColor: "rgb(68, 99, 241)",
+          backgroundColor: "rgb(120, 145, 255)",
           margin: 0,
           textAlign: "center",
           color: "white",
         }}
+        id="ano-atual"
       >
         Copyright © 2025 Passo Livre
       </p>

@@ -1,4 +1,6 @@
 import style from "./style.module.css";
+import { Link } from "react-scroll";
+import { sections } from "./sections";
 
 export default function Header() {
   return (
@@ -7,27 +9,42 @@ export default function Header() {
         className={style.menu}
         style={{ transition: "all .5s", zIndex: "20" }}
       >
-        <a href="/">
-          <img
-            src="/public/Logo/logo.svg"
-            alt="Passo-Livre-Logo"
-            className={style["logo-top"]}
-          />
-        </a>
-
-        <nav>
-          <ul className={style["lista-nav"]}>
-            <div>
-              <a href="/">
-                <li className={style.listagem}>Home</li>
-              </a>
-            </div>
-            <li className={style.listagem}>Quem Somos</li>
-            <li className={style.listagem}>Atividades</li>
-            <li className={style.listagem}>Contatos</li>
-          </ul>
+        <nav className={style["lista-nav"]}>
+          <div className={style["lista-nav"]}>
+            <Link
+              to={sections.home}
+              smooth={true}
+              duration={500}
+              className={style.listagem}
+            >
+              Home
+            </Link>
+            <Link
+              to={sections.quemSomos}
+              smooth={true}
+              duration={500}
+              className={style.listagem}
+            >
+              Quem Somos
+            </Link>
+            <Link
+              to={sections.atividades}
+              smooth={true}
+              duration={500}
+              className={style.listagem}
+            >
+              Atividades
+            </Link>
+            <Link
+              to={sections.contatos}
+              smooth={true}
+              duration={500}
+              className={style.listagem}
+            >
+              Contatos
+            </Link>
+          </div>
         </nav>
-        <div></div>
       </div>
     </header>
   );

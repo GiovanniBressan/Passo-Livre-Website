@@ -1,10 +1,11 @@
 import style from "./style.module.css";
+import { sections } from "../header/sections";
 
 export default function Main() {
   return (
     <main>
       <section className={style.sectionBoxMain}>
-        <div className={style.border}>
+        <div className={style.border} id={sections.quemSomos}>
           <h2 className={style.quemSomos}>Quem Somos</h2>
           <p className={style.text}>
             Estamos desde 1998, oferecendo um ambiente acolhedor para berçário,
@@ -20,7 +21,7 @@ export default function Main() {
           </p>
         </div>
       </section>
-      <section className={style.sectionBoxMainSec}>
+      <section className={style.sectionBoxMainSec} id={sections.atividades}>
         <div className={style.boxSect}>
           <div className={style.bercarioBox}>
             <h3 className={style.titulo}>Berçário</h3>
@@ -45,7 +46,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/bercario/berçario-1 1.svg"
+              src={"/berçario-1_1.svg"}
               alt="bebês no berçário"
               className={style.bercarioImg}
             />
@@ -76,7 +77,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/Maternal/maternal-1 .svg"
+              src={"/pre-1.svg"}
               alt="crianças maternal"
               className={style.bercarioImg}
             />
@@ -107,7 +108,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/pre-escola/Pre-1 1.svg"
+              src={"/pre-2.svg"}
               alt="crianças"
               className={style.bercarioImg}
             />
