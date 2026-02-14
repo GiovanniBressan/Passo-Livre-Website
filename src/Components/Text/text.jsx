@@ -45,7 +45,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/bercario/berçario-1 1.svg"
+              src={"/berçario-1_1.svg"}
               alt="bebês no berçário"
               className={style.bercarioImg}
             />
@@ -76,7 +76,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/Maternal/maternal-1 .svg"
+              src={"/maternal-1.svg"}
               alt="crianças maternal"
               className={style.bercarioImg}
             />
@@ -107,7 +107,7 @@ export default function Main() {
           </div>
           <div className={style.itemMain}>
             <img
-              src="/public/pre-escola/Pre-1 1.svg"
+              src={"/pre-1.svg"}
               alt="crianças"
               className={style.bercarioImg}
             />

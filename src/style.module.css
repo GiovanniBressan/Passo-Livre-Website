@@ -7,44 +7,38 @@
 
 body {
   margin: auto;
-  padding: auto;
-}
-
-body,
-html {
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
 .fundoBanner {
-  background-image: url("/public/fachada/fachada.svg");
+  background-image: url("/fachada.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
-  position: relative;
+  align-items: center; /* novo → centraliza verticalmente */
+  justify-content: center; /* novo → centraliza horizontalmente */
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5 px;
+  border-bottom-right-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .bannerLogo {
   display: flex;
-  position: absolute;
-  top: 0;
-  padding: 48px;
-  width: 40%;
-  margin-top: 140px;
-  margin-left: 120px;
+  flex-direction: column; /* novo → coloca logo + textos em coluna */
+  align-items: center; /* novo → centraliza */
+  text-align: center; /* novo → centraliza textos */
+  padding: 2rem;
 }
 
 .boxMain {
-  position: absolute;
+  position: relative;
 }
 
 .logoMain {
-  height: 12rem;
+  max-width: 100%; /* novo → nunca passa da tela */
+  height: auto; /* novo → ajusta proporção */
+  max-height: 12rem;
 }
 
 .boxText {
@@ -54,30 +48,46 @@ html {
   border-left-width: 0;
   border-right-width: 0;
   border-color: white;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 3rem); /* modificado → usa tamanho fluido */
   color: white;
   font-style: italic;
-  line-height: 3rem;
+  line-height: 1.2;
 }
 
 .boxTextSec {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* modificado → fluido */
   color: white;
 }
 
 @media (max-width: 768px) {
+  .fundoBanner {
+    background-image: url("/fachada.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   .bannerLogo {
     margin-left: 0;
-    width: 100%;
+    width: auto;
     padding: 1rem;
   }
 
   .boxText {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
   .boxTextSec {
-    font-size: 1.2rem;
+    font-size: 2rem;
+  }
+  .logoMain {
+    max-height: 8rem;
   }
 }

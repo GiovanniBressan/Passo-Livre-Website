@@ -22,15 +22,19 @@ export default function Footer() {
             <div className={style.socialMidia}>
               <a href="https://www.instagram.com/escolapassolivre/">
                 <img
-                  src="/public/Logo/instagram.svg"
+                  src={"/instagram.svg"}
                   alt="instagram"
                   className={style.socialMidia}
                 />
               </a>
-              <a href="https://www.facebook.com/passolivreescola/">
+              <a
+                href="https://www.facebook.com/passolivreescola/"
+                target="_blank"
+              >
                 <img
-                  src="/public/Logo/facebook.svg"
+                  src={"/facebook.svg"}
                   alt="Facebook"
+                  target="_blank"
                   className={style.socialMidia}
                 />
               </a>
@@ -70,11 +74,12 @@ export default function Footer() {
       </div>
       <p
         style={{
-          backgroundColor: "rgb(68, 99, 241)",
+          backgroundColor: "rgb(80, 111, 255)",
           margin: 0,
           textAlign: "center",
           color: "white",
         }}
+        id="ano-atual"
       >
         Copyright © 2025 Passo Livre
       </p>

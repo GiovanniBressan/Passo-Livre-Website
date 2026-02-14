@@ -1,47 +1,38 @@
 .footerBox {
   display: flex;
-  background-color: rgb(68, 99, 241);
-  display: flex;
-  padding: 1rem;
-  height: 30rem;
+  flex-wrap: wrap; /* permite quebrar linha quando não couber */
+  background-color: rgb(80, 111, 255);
+  padding: 2rem;
+  gap: 2rem;
   opacity: 1;
   animation: showUp 0.8s ease-in;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  align-items: center;
+  align-items: flex-start;
   color: white;
 }
 
 .listUl {
   list-style-type: none;
-  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .footerItem {
   display: flex;
   flex-direction: column;
-  border-top-width: 0;
-  border-style: solid;
-  border-bottom-width: 0;
-  border-right-width: 0;
-  border-left-width: 1px;
-  border-color: white;
-  width: 60%;
+  flex: 1; /* ocupa espaço proporcional */
+  min-width: 200px; /* garante que não fique estreito demais */
+  gap: 0.75rem;
 }
 
-.listagemFooter {
+.listagemFooter:hover {
   color: white;
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  list-style-type: none;
-  height: 30px;
-  padding: 0.5rem;
 }
 
 .socialMidia {
-  height: 6rem;
-  padding: 0.75rem;
+  height: clamp(2rem, 5vw, 3rem);
+  padding: 0.5rem;
 }
 @media (max-width: 768px) {
   .footerBox {
@@ -49,6 +40,7 @@
     height: auto;
     width: auto;
     text-align: center;
+    align-items: center;
   }
 
   .footerItem {
@@ -58,6 +50,6 @@
   }
 
   .socialMidia {
-    height: 3rem;
+    height: 2.5rem;
   }
 }
